@@ -83,25 +83,23 @@ void main()
 	cout << "Введите любое деятичное число: "; cin >> number;
 	//массив перевода в двоичную систему
 	temp = number;
-	for (int i = 0; i < number; i++)
+	int i = 0;
+	for (int i = 0; temp; i++)
 	{
-	 if (temp >= 2)
-	 {
 		arr[i] = temp % 2;
 		temp = temp / 2;
-	 }
 	cout << endl;
 	}
 	cout << endl;
 	// вывод массива
-	for (int i = 0; i < number; i++)
-	{
-		cout << arr[i] << "\t";
-	}
-	cout << endl;
+	//for (int i = 0; i < temp i++)
+	//{
+		//cout << arr[i] << "\t";
+	//}
+	//cout << endl;
 	// вывод числа в двоичной СС
 	cout << "Число в двоичной системе счисления: ";
-	for (int i = number - 1; i >= 0; i--)
+	for (--i; i >= 0; i--)
 	{
 		cout << arr[i];
 	}
