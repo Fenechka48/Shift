@@ -1,6 +1,6 @@
 #include <iostream>;
 using namespace std;
-int Add(int a, int b);
+int Add(int a, int b);// прототип функции ( объявление функции - Function declaration)
 int Sub(int a, int b);
 int Mul(int a, int b);
 int Div(int a, int b); 
@@ -10,14 +10,14 @@ void main()
 	setlocale(LC_ALL, "");
 	int a, b;
 	cout << "Введите два числа: "; cin >> a >> b;
-	int c = Add(a, b);
+	int c = Add(a, b);// использование функции (вызов функции - Function call)
 	cout << a << "+" << b << "=" << c << endl;
 	cout << a << "-" << b << "=" << Sub(a, b) << endl;
 	cout << a << "/" << b << "=" << Div(a, b) << endl;
 	cout << a << "*" << b << "=" << Mul(a, b) << endl;
 }
 
-int Add(int a, int b)
+int Add(int a, int b) //  реализация функции (Определение функции - Function defenition)
 {
 	// addition - сложение
 	int sum = a + b;
