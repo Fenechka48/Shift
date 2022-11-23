@@ -52,12 +52,13 @@ void elevator(int floor)
 }
 long int Fact(long int N) 
 {
-	if (N == 1)
-		return 1;
-	else
-		return N * Fact(N - 1) ;
-	if (N < 1)
-		return 0;
+	//if (N == 1)
+	//	return 1;
+	//else
+	//	return N * Fact(N - 1) ;
+	//if (N < 1)
+	//	return 0;
+	return  N== 0 ? 1 : N * Fact(N - 1);
 }
 
 
