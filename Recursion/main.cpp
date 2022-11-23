@@ -22,14 +22,21 @@ void main()
 	cout << "Введите степень "; cin >> stepen;
 	long value = Pow(Num,stepen);
 	cout << "Результат " << value << "\n";
-	long int N;
+	long int N,n;
     std:cout << "Введите количество членов для ряда Фибоначи: ";cin >> N;
-	for (int i = 0; i <= N; i++)
+	for (int i = 0; i < N; i++)
 	{
 		cout << Fib(i) << "\t";
 	}
 	cout << endl;
-
+	
+	cout << "Введите предел для ряда Фибоначи: "; cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		if (Fib(i)<=n)
+		cout << Fib(i) << "\t";
+	}
+	cout << endl;
 	
 }
 void elevator(int floor)
