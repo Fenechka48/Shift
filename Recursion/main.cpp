@@ -53,7 +53,7 @@ long int Fact(long int N)
 		return 0;
 }
 
-// in work
+
 long int Pow(long int Num,int stepen)
 {
 	if (stepen == 0)
