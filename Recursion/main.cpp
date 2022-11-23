@@ -22,10 +22,13 @@ void main()
 	cout << "Введите степень "; cin >> stepen;
 	long value = Pow(Num,stepen);
 	cout << "Результат " << value << "\n";
-	const int N;
-	cout << "Введите предел для ряда Фибоначи: "; cin >> N;
-
-
+	long int N;
+    std:cout << "Введите предел для ряда Фибоначи: ";cin >> N;
+	for (int i = 0; i <= N; i++)
+	{
+		cout << Fib(i) << endl;
+	}
+	cout << endl;
 	
 }
 void elevator(int floor)
@@ -59,5 +62,10 @@ long int Pow(long int Num,int stepen)
 }
 long int Fib(long int N)
 {
+	if (N == 0)
+		return 0;
+	if (N == 1)
+		return 1;
+	
 	return  Fib(N - 2) + Fib(N - 1);
 }
