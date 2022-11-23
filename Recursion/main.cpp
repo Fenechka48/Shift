@@ -23,7 +23,7 @@ void main()
 	long value = Pow(Num,stepen);
 	cout << "Результат " << value << "\n";
 	long int N;
-    std:cout << "Введите предел для ряда Фибоначи: ";cin >> N;
+    std:cout << "Введите количествочленов для ряда Фибоначи: ";cin >> N;
 	for (int i = 0; i <= N; i++)
 	{
 		cout << Fib(i) << "\t";
@@ -69,3 +69,4 @@ long int Fib(long int N)
 	
 	return  Fib(N - 2) + Fib(N - 1);
 }
+
