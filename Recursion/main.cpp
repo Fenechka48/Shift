@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 void elevator(int floor);
@@ -11,19 +11,19 @@ void main()
 	setlocale(LC_ALL, "");
 	//cout << "Hello Recursion" << endl;
 	//int n;
-	//cout << "Ââåäèòå íîìåð ýòàæà: "; cin >> n;
+	//cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÑ‚Ð°Ð¶Ð°: "; cin >> n;
 	//elevator(n);
 	long number;
 	int Num, stepen;
-	cout << "Ââåäèòå ÷èñëî äëÿ âû÷èñëåíèÿ ôàêòîðèàëà: "; cin >> number;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð´Ð»Ñ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð»Ð°: "; cin >> number;
 	long result = Fact(number);
-	cout << "Ôàêòîðèàë ðàâåí: " << result << "\n";
-	cout << "Ââåäèòå ÷èñëî: "; cin >> Num; 
-	cout << "Ââåäèòå ñòåïåíü "; cin >> stepen;
+	cout << "Ð¤Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð» Ñ€Ð°Ð²ÐµÐ½: " << result << "\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> Num; 
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚ÐµÐ¿ÐµÐ½ÑŒ "; cin >> stepen;
 	long value = Pow(Num,stepen);
-	cout << "Ðåçóëüòàò " << value << "\n";
+	cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ " << value << "\n";
 	long int N;
-    std:cout << "Ââåäèòå êîëè÷åñòâî ÷ëåíîâ äëÿ ðÿäà Ôèáîíà÷è: ";cin >> N;
+    std:cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð´Ð»Ñ Ñ€ÑÐ´Ð° Ð¤Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ð¸: ";cin >> N;
 	for (int i = 0; i <= N; i++)
 	{
 		cout << Fib(i) << "\t";
@@ -36,12 +36,12 @@ void elevator(int floor)
 {
 	if (floor == 0)
 	{
-		cout << "Âû â ïîäâàëå" << endl;
+		cout << "Ð’Ñ‹ Ð² Ð¿Ð¾Ð´Ð²Ð°Ð»Ðµ" << endl;
 		return;
 	}
-	cout << "Âû íà " << floor << " ýòàæå " << endl;
+	cout << "Ð’Ñ‹ Ð½Ð° " << floor << " ÑÑ‚Ð°Ð¶Ðµ " << endl;
 	elevator(floor-1);
-	cout << "Âû íà " << floor << " ýòàæå " << endl;
+	cout << "Ð’Ñ‹ Ð½Ð° " << floor << " ÑÑ‚Ð°Ð¶Ðµ " << endl;
 }
 long int Fact(long int N) 
 {
