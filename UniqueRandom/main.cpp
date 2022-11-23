@@ -1,5 +1,6 @@
 #include <iostream>;
 #include <ctime>;
+
 using namespace std;
 
 void main()
@@ -8,16 +9,23 @@ void main()
 	srand(time(NULL));
 	const int n = 10;
 	int arr[n];
-	
-	for (int i = 0; i < n;i++)
+	bool value;
+	for (int i = 0; i < n;)
 	{
-		for (int j = 0; j < n;)
+		value = false;
+		int value = rand() % (80 - 70) + 70;
+		for (int j = 0; j < i; j++)
 		{
-			if (arr[j] == arr[i] && i != j)
+			if (arr[j] == value)
 			{
-				arr[i] = rand() % (80 - 70) + 70;
-				j++;
+				value = true;
+				break;
 			}
+		}
+		if (value != true)
+		{
+			arr[i] = value;
+			i++;
 		}
 	}
 	for (int i = 0; i < n; i++)

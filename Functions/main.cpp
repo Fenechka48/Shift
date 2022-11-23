@@ -4,6 +4,7 @@ int Add(int a, int b);// прототип функции ( объявление функции - Function declar
 int Sub(int a, int b);
 int Mul(int a, int b);
 int Div(int a, int b); 
+int Power(int a, int b);
 
 void main()
 {
@@ -15,6 +16,7 @@ void main()
 	cout << a << "-" << b << "=" << Sub(a, b) << endl;
 	cout << a << "/" << b << "=" << Div(a, b) << endl;
 	cout << a << "*" << b << "=" << Mul(a, b) << endl;
+	cout << a << "  в степени " << b << "= " << Power(a, b) << endl;
 }
 
 int Add(int a, int b) //  реализация функции (Определение функции - Function defenition)
@@ -35,4 +37,14 @@ int Mul(int a, int b)
 int Div(int a, int b)
 {
 	return a / b;
+}
+
+int Power(int a, int b)
+{
+	int temp = 1;
+	for (int i = 1; i <= b; i++)
+	{
+		temp *= a;
+	}
+	return temp;
 }
