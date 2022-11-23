@@ -26,7 +26,7 @@ void main()
     std:cout << "Введите предел для ряда Фибоначи: ";cin >> N;
 	for (int i = 0; i <= N; i++)
 	{
-		cout << Fib(i) << endl;
+		cout << Fib(i) << "\t";
 	}
 	cout << endl;
 	
