@@ -24,6 +24,7 @@
     <ProjectGuid>{5e2f1667-8bdd-44b9-8999-f222a97caa61}</ProjectGuid>
     <RootNamespace>Functionnew</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Function_new_Arryas</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

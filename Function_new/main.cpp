@@ -15,6 +15,8 @@ int maxValueIn(int arr[], const int n);
 void shiftLeft(int arr[], const int n, int number_of_shifts);
 void shiftRight(int arr[], const int n, int number_of_shifts);
 void Sort(int arr[], const int n);
+void UniqueRand(int arr[], const int n);
+void Search(int arr[], const int SIZE);
 
 void main()
 {
@@ -31,25 +33,31 @@ void main()
 
 	cout << "Минимальное значение из массива: " << minValueIn(arr, n) << endl;
 	cout << "Максимальное значение из массива: " << maxValueIn(arr, n) << endl;
+	//cout << "Колличество повторений : "
 	Sort(arr, n);
 	Print(arr, n);
+
 	//int number_of_shifts;
 	//cout << "Введите количество сдвигов: "; cin >> number_of_shifts;
 	//shiftLeft(arr, n, number_of_shifts);
 	//Print(arr, n);
 	//shiftRight(arr, n, number_of_shifts);
 	//Print(arr, n);
-
 	cout << delimiter << endl;
 	const int SIZE = 8;
 	double brr[SIZE];
-	FillRand(brr, SIZE);
-	Print(brr, SIZE);
+	//FillRand(brr, SIZE);
+	//Print(brr, SIZE);
 	//cout << "Сумма элементов массива: " << Sum(brr, SIZE) << endl;
 	//cout << "Среднее арифметическое значение  " << Avg(brr, SIZE) << endl;
 	//cout << "Минимальное значение из массива: " << minValueIn(brr, SIZE) << endl;
 	//cout << "Максимальное значение из массива: " << maxValueIn(brr, SIZE) << endl;
-
+	//UniqueRand(arr, n);
+	//Print(arr, n);
+	cout << delimiter << endl;
+	FillRand(arr, n);
+	Print(arr, n);
+	Search(arr, n);
 }
 
 void FillRand(int arr[], const int n, int minRand, int maxRand)
@@ -175,4 +183,42 @@ void Print(double arr[], const int n)
 		cout << arr[i] << "\t";
 	}
 	cout << endl;
+}
+
+void UniqueRand(int arr[], const int n)
+{
+	bool value;
+	for (int i = 0; i < n;)
+	{
+		value = false;
+		int value = rand() % 20;
+		for (int j = 0; j < i; j++)
+		{
+			if (arr[j] == value)
+			{
+				value = true;
+				break;
+			}
+		}
+		if (value != true)
+		{
+			arr[i] = value;
+			i++;
+		}
+	}
+}
+void Search(int arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (arr[i] == arr[j] && i!= j)
+			{
+				cout << arr[i];
+				break;
+			}
+		}
+		cout << endl;
+	}
 }
