@@ -64,19 +64,20 @@ long int Fact(long int N)
 
 long int Pow(long int Num,int stepen)
 {
-	if (stepen == 0)
-		return 1;
-	else
-		return Num * Pow(Num, stepen - 1);
+	//if (stepen == 0)
+	//	return 1;
+	//else
+	//	return Num * Pow(Num, stepen - 1);
+	return stepen==0 ? 1: Num * Pow(Num, stepen - 1);
 }
 long int Fib(long int N)
 {
-	if (N == 0)
-		return 0;
-	if (N == 1)
-		return 1;
-	
-	return  Fib(N - 2) + Fib(N - 1);
+	//if (N == 0)
+	//	return 0;
+	//if (N == 1)
+	//	return 1;
+	//return  Fib(N - 2) + Fib(N - 1);
+	return N == 0 || N==1 ? 1 : Fib(N - 2) + Fib(N - 1);
 }
 
 
