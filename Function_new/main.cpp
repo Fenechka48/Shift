@@ -1,17 +1,20 @@
 ﻿#include <iostream>
 using namespace std;
 #define delimiter "\n-----------------------------------------------\n"
+const int ROWS = 3;
+const int COLS = 4;
 
 void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(double brr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(float crr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(char drr[], const int n, int minRand = 0, int maxRand = 100);
+void FillRand(int arr[ROWS][COLS], const int n, int minRand = 0, int maxRand = 100);
 
 void Print(int arr[], const int n);
 void Print(double brr[], const int SIZE);
 void Print(float crr[], const int c);
 void Print(char drr[], const int d);
-
+void Print(int arr[ROWS][COLS], const int n);
 
 int Sum(int arr[], int n);
 double Sum(double brr[], int SIZE);
@@ -95,7 +98,25 @@ void main()
 	cout << "Среднее арифметическое значение  " << Avg(drr, d) << endl;
 	cout << "Минимальное значение из массива: " << minValueIn(drr, d) << endl;
 	cout << "Максимальное значение из массива: " << maxValueIn(drr, d) << endl;
+	
+	int i_arr_2[ROWS][COLS];
+	for (int i = 0, i < ROWS; i++)
+	{
+		for(int j = 0; j < COLS, j++)
+		{
+			i_arr_2[i][j] = rand() % 100;
+		}
+	}
+	for (int i = 0, i < ROWS; i++)
+	{
+		for(int j = 0; j < COLS, j++)
+		{
+			cout<<i_arr_2[i][j] <<"\t";
+		}
+	}
+
 }
+
 
 void FillRand(int arr[], const int n, int minRand, int maxRand)
 {
@@ -153,6 +174,18 @@ void FillRand(char drr[], const int d, int minRand, int maxRand)
 	{
 		drr[i] = rand() % (maxRand - minRand) + minRand;
 	}
+}
+void FillRand(int arr[ROWS][COLS], const int n, int minRand = 0, int maxRand = 100);
+if (minRand > maxRand)
+{
+	int buffer = minRand;
+	minRand = maxRand;
+	maxRand = buffer;
+}
+if (minRand == maxRand)maxRand++;
+for (int i = 0; i < n; i++)
+{
+	arr[i] = rand() % (maxRand - minRand) + minRand;
 }
 
 void Print(int arr[], const int n)
